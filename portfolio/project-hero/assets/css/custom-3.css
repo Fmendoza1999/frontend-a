@@ -1,0 +1,75 @@
+/*title Felix Mendoza Id: 75225*/
+/* HERO BLOCK 3 — Split layout */
+.hero-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 90vh;
+}
+
+/* LEFT IMAGE */
+.hero-3 .hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* RIGHT PANEL */
+.hero-3 .hero-content {
+    background-color: #f7eecd; /* cream color */
+    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* HEADLINE */
+.hero-3 h1 {
+    font-family: 'Abril Fatface', serif;
+    font-size: 3.8rem;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: #000;
+}
+
+/* SUBTEXT */
+.hero-3 .subtext {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #444;
+}
+
+/* BUTTON ROW */
+.btn-row {
+    display: flex;
+    gap: 15px;
+}
+
+/* LIGHT BUTTON */
+.btn-light {
+    padding: 12px 26px;
+    border: 2px solid #000;
+    background: transparent;
+    text-decoration: none;
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* DARK BUTTON */
+.btn-dark {
+    padding: 12px 26px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}

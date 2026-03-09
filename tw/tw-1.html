@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Soccer Players & Portfolio Hero</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind to use Inter font and other settings -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- Link to Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Inter font globally for consistency */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- 1. PORTFOLIO HERO SECTION -->
+    <header class="flex items-center justify-center 
+                   min-h-[500px] md:min-h-[80vh] 
+                   bg-gradient-to-r from-purple-500 to-pink-500 
+                   text-center 
+                   px-5 md:px-20 
+                   pb-4">
+        <!-- Text Container -->
+        <div class="max-w-5xl">
+            <!-- Main Heading -->
+            <h1 class="text-white 
+                       text-5xl md:text-8xl lg:text-9xl 
+                       mb-6 
+                       tracking-tight">
+                Albert Camus
+            </h1>
+            <!-- Subheading -->
+            <p class="text-white 
+                      text-xl md:text-3xl 
+                      font-normal 
+                      uppercase">
+                Creative Web Developer
+            </p>
+        </div>
+    </header>
+    <!-- END PORTFOLIO HERO SECTION -->
+
+    <main>
+        <!-- Title for the main content area -->
+        <div class="px-8 lg:px-64 py-10 bg-gray-900">
+            <h1 class="text-4xl lg:text-6xl tracking-tight font-bold text-white text-center">
+                The World's Top Five Soccer Players
+            </h1>
+        </div>
+        
+        <!-- 2. SOCCER PLAYERS CONTENT SECTIONS -->
+
+        <!-- Player 1: Lionel Messi -->
+        <section class="py-10 bg-gray-50 px-8 lg:px-64">
+            <h2 class="text-4xl lg:text-6xl tracking-tight font-semibold mb-2">
+                Lionel Messi
+            </h2>
+            <img class="w-full h-auto max-w-lg rounded-lg shadow-xl mb-4" 
+                 src="https://placehold.co/800x450/2563EB/ffffff/png?text=LIONEL+MESSI" 
+                 alt="Placeholder image for Lionel Messi" 
+                 onerror="this.src='https://placehold.co/800x450/2563EB/ffffff/png?text=LIONEL+MESSI'">
+            <p class="text-base lg:text-lg mb-4">
+                Widely regarded as one of the greatest players of all time, Lionel Messi's career is defined by his incredible agility, vision, and prolific goal-scoring. His low center of gravity allows for unmatched ball control, weaving through defenses with ease. He holds numerous records, including the most Ballon d'Or awards, solidifying his status as a footballing legend across multiple decades.
+            </p>
+            <p class="text-base lg:text-lg mb-4">
+                After historic success at Barcelona and a move to Paris Saint-Germain, Messi achieved his ultimate career goal by leading Argentina to victory in the 2022 FIFA World Cup. His late-career move to Major League Soccer (MLS) continues to inspire a new generation of fans and players, proving his influence transcends traditional football leagues.
+            </p>
+        </section>
+
+        <!-- Player 2: Cristiano Ronaldo -->
+        <section class="py-10 bg-blue-50 px-8 lg:px-64">
+            <h2 class="text-4xl lg:text-6xl tracking-tight font-semibold mb-2">
+                Cristiano Ronaldo
+            </h2>
+            <img class="w-full h-auto max-w-lg rounded-lg shadow-xl mb-4" 
+                 src="https://placehold.co/800x450/EAB308/000000/png?text=CRISTIANO+RONALDO" 
+                 alt="Placeholder image for Cristiano Ronaldo" 
+                 onerror="this.src='https://placehold.co/800x450/EAB308/000000/png?text=CRISTIANO+RONALDO'">
+            <p class="text-base lg:text-lg mb-4">
+                Known for his relentless dedication, powerful athleticism, and extraordinary goal-scoring ability, Cristiano Ronaldo is an icon of the modern game. His career highlights include multiple Champions League titles with Manchester United and Real Madrid, making him one of the few players to achieve such consistent, top-tier European dominance.
+            </p>
+            <p class="text-base lg:text-lg mb-4">
+                Ronaldo is the all-time leading goal scorer in men's international football and the Champions League. His longevity at the elite level, coupled with his move to the Saudi Pro League, demonstrates an enduring global presence. His commitment to physical fitness and competitive spirit remains unmatched, inspiring millions worldwide.
+            </p>
+        </section>
+
+        <!-- Player 3: Kylian Mbappé -->
+        <section class="py-10 bg-green-50 px-8 lg:px-64">
+            <h2 class="text-4xl lg:text-6xl tracking-tight font-semibold mb-2">
+                Kylian Mbappé
+            </h2>
+            <img class="w-full h-auto max-w-lg rounded-lg shadow-xl mb-4" 
+                 src="https://placehold.co/800x450/10B981/ffffff/png?text=KYLIAN+MBAPPE" 
+                 alt="Placeholder image for Kylian Mbappé" 
+                 onerror="this.src='https://placehold.co/800x450/10B981/ffffff/png?text=KYLIAN+MBAPPE'">
+            <p class="text-base lg:text-lg mb-4">
+                Kylian Mbappé represents the next generation of football superstars. His blistering pace, clinical finishing, and maturity on the pitch at a young age have set him apart. He was instrumental in France's 2018 World Cup victory and followed it up with a spectacular hat-trick in the 2022 final, cementing his status as a clutch performer.
+            </p>
+            <p class="text-base lg:text-lg mb-4">
+                Playing for Paris Saint-Germain, Mbappé has consistently been the top scorer in Ligue 1, showcasing an incredible consistency that belies his age. His ability to change the momentum of a game single-handedly through explosive runs and decisive goals makes him one of the most exciting and valuable players in the world today.
+            </p>
+        </section>
+
+        <!-- Player 4: Erling Haaland -->
+        <section class="py-10 bg-yellow-50 px-8 lg:px-64">
+            <h2 class="text-4xl lg:text-6xl tracking-tight font-semibold mb-2">
+                Erling Haaland
+            </h2>
+            <img class="w-full h-auto max-w-lg rounded-lg shadow-xl mb-4" 
+                 src="https://placehold.co/800x450/F59E0B/000000/png?text=ERLING+HAALAND" 
+                 alt="Placeholder image for Erling Haaland" 
+                 onerror="this.src='https://placehold.co/800x450/F59E0B/000000/png?text=ERLING+HAALAND'">
+            <p class="text-base lg:text-lg mb-4">
+                Erling Haaland is a powerhouse center-forward known for his remarkable goal-scoring instinct and imposing physical presence. Since joining Manchester City, he has shattered numerous Premier League records, transforming the team's attacking dynamics and leading them to multiple major trophies, including the UEFA Champions League.
+            </p>
+            <p class="text-base lg:text-lg mb-4">
+                His combination of height, speed, and clinical finishing makes him a nightmare for defenders. Haaland's ability to convert chances from any angle and his knack for being in the right place at the right time suggest he is set to dominate the global goal-scoring charts for the next decade, challenging the records of previous legends.
+            </p>
+        </section>
+
+        <!-- Player 5: Alexia Putellas (Women's Football representation) -->
+        <section class="py-10 bg-red-50 px-8 lg:px-64">
+            <h2 class="text-4xl lg:text-6xl tracking-tight font-semibold mb-2">
+                Alexia Putellas
+            </h2>
+            <img class="w-full h-auto max-w-lg rounded-lg shadow-xl mb-4" 
+                 src="https://placehold.co/800x450/EF4444/ffffff/png?text=ALEXIA+PUTELLAS" 
+                 alt="Placeholder image for Alexia Putellas" 
+                 onerror="this.src='https://placehold.co/800x450/EF4444/ffffff/png?text=ALEXIA+PUTELLAS'">
+            <p class="text-base lg:text-lg mb-4">
+                Alexia Putellas is a two-time Ballon d'Or Féminin winner and a pivotal figure in the rise of FC Barcelona Femení and the Spanish national team. Her exceptional midfield creativity, precise passing, and ability to score stunning goals from distance have made her a generational talent in women's football.
+            </p>
+            <p class="text-base lg:text-lg mb-4">
+                She broke the record for most appearances for Barcelona and has captained the team to historic achievements, including multiple domestic titles and Champions League trophies. Her leadership and technical brilliance have elevated the standard of the women's game and earned her recognition as one of the world's truly elite athletes, regardless of gender.
+            </p>
+        </section>
+        
+    </main>
+    
+</body>
+</html>

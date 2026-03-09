@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Soccer Players & Portfolio Hero</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind to use Inter font and other settings -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- Link to Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Inter font globally for consistency */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- 1. PORTFOLIO HERO SECTION (UNCHANGED) -->
+    <header class="flex items-center justify-center 
+                   min-h-[500px] md:min-h-[80vh] 
+                   bg-gradient-to-r from-purple-500 to-pink-500 
+                   text-center 
+                   px-5 md:px-20 
+                   pb-4">
+        <!-- Text Container -->
+        <div class="max-w-5xl">
+            <!-- Main Heading -->
+            <h1 class="text-white 
+                       text-5xl md:text-8xl lg:text-9xl 
+                       mb-6 
+                       tracking-tight">
+                Albert Camus
+            </h1>
+            <!-- Subheading -->
+            <p class="text-white 
+                      text-xl md:text-3xl 
+                      font-normal 
+                      uppercase">
+                Creative Web Developer
+            </p>
+        </div>
+    </header>
+    <!-- END PORTFOLIO HERO SECTION -->
+
+    <main>
+        <!-- Title for the main content area -->
+        <!-- Adjusted padding to match the new content section requirements (lg:px-24) and updated text to 'Eight' -->
+        <div class="px-8 lg:px-24 py-10 bg-gray-900">
+            <h1 class="text-4xl lg:text-6xl tracking-tight font-bold text-white text-center">
+                The World's Top Eight Soccer Players
+            </h1>
+        </div>
+        
+        <!-- 2. SOCCER PLAYERS CONTENT SECTION (CSS GRID Layout for 8 Players) -->
+        <!-- Vertical padding: py-10. Horizontal padding: px-8 (mobile), lg:px-24 (desktop) -->
+        <section class="py-10 px-8 lg:px-24 bg-gray-100">
+            <!-- Grid structure: 1 column on mobile, 2 on medium, 4 on large (desktop) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- Player 1: Lionel Messi -->
+                <div class="bg-white p-6 rounded-lg shadow-xl">
+                    <!-- h3: text-xl (mobile), lg:text-2xl (desktop), tight tracking, semibold, mb-2 -->
+                    <h3 class="text-xl lg:text-2xl tracking-tight font-semibold mb-2">
+                        Lionel Messi
+                    </h3>
+                    <img class="w-full h-auto rounded-lg shadow-md mb-4" 
+                         src="https://placehold.co/600x400/2563EB/ffffff/png?text=LIONEL+MESSI" 
+                         alt="Placeholder image for Lionel Messi" 
+                         onerror="this.src='https://placehold.co/600x400/2563EB/ffffff/png?text=LIONEL+MESSI'">
+                    <!-- p: text-base, mb-4 -->
+                    <p class="text-base mb-4 text-gray-700">
+                        Regarded as the GOAT, Lionel Messi is defined by his unmatched agility, vision, and ball control, solidifying his status as a footballing legend across multiple decades.
+                    </p>
+                </div>
+
+                <!-- Player 2: Cristiano Ronaldo -->
+                <div class="bg-white p-6 rounded-lg shadow-xl">
+                    <h3 class="text-xl lg:text-2xl tracking-tight font-semibold mb-2">
+                        Cristiano Ronaldo
+                    </h3>
+                    <img class="w-full h-auto rounded-lg shadow-md mb-4" 
+                         src="https://placehold.co/600x400/EAB308/000000/png?text=CRISTIANO+RONALDO" 
+                         alt="Placeholder image for Cristiano Ronaldo" 
+                         onerror="this.src='https://placehold.co/600x400/EAB308/000000/png?text=CRISTIANO+RONALDO'">
+                    <p class="text-base mb-4 text-gray-700">
+                        An icon of dedication and athleticism, Ronaldo is the all-time leading goal scorer in international football and a winner of multiple Champions League titles.
+                    </p>
+                </div>
+
+                <!-- Player 3: Kylian Mbappé -->
+                <div class="bg-white p-6 rounded-lg shadow-xl">
+                    <h3 class="text-xl lg:text-2xl tracking-tight font-semibold mb-2">
+                        Kylian Mbappé
+                    </h3>
+                    <img class="w-full h-auto rounded-lg shadow-md mb-4" 
+                         src="https://placehold.co/600x400/10B981/ffffff/png?text=KYLIAN+MBAPPE" 
+                         alt="Placeholder image for Kylian Mbappé" 
+                         onerror="this.src='https://placehold.co/600x400/10B981/ffffff/png?text=KYLIAN+MBAPPE'">
+                    <p class="text-base mb-4 text-gray-700">
+                        The future of football, Mbappé is known for his blistering pace, clinical finishing, and clutch performances, including a World Cup hat-trick in the 2022 final.
+                    </p>
+                </div>
+
+                <!-- Player 4: Erling Haaland -->
+                <div class="bg-white p-6 rounded-lg shadow-xl">
+                    <h3 class="text-xl lg:text-2xl tracking-tight font-semibold mb-2">
+                        Erling Haaland
+                    </h3>
+                    <img class="w-full h-auto rounded-lg shadow-md mb-4" 
+                         src="https://placehold.co/600x400/F59E0B/000000/png?text=ERLING+HAALAND" 
+                         alt="Placeholder image for Erling Haaland" 
+                         onerror="this.src='https://placehold.co/600x400/F59E0B/000000/png?text=ERLING+HAALAND'">
+                    <p class="text-base mb-4 text-gray-700">
+                        A modern powerhouse center-forward, Haaland shatters scoring records with his goal-scoring instinct and imposing physical presence for Manchester City.
+                    </p>
+                </div>
+                
+                <!-- Player 5: Alexia Putellas -->
+                <div class="bg-white p-6 rounded-lg shadow-xl">
+                    <h3 class="text-xl lg:text-2xl tracking-tight font-semibold mb-2">
+                        Alexia Putellas
+                    </h3>
+                    <img class="w-full h-auto rounded-lg shadow-md mb-4" 
+                         src="https://placehold.co/600x400/EF4444/ffffff/png?text=ALEXIA+PUTELLAS" 
+                         alt="Placeholder image for Alexia Putellas" 
+                         onerror="this.src='https://placehold.co/600x400/EF4444/ffffff/png?text=ALEXIA+PUTELLAS'">
+                    <p class="text-base mb-4 text-gray-700">
+                        A two-time Ballon d'Or Féminin winner, she is a world-class midfielder known for her exceptional creativity, passing, and pivotal role for FC Barcelona Femení.
+                    </p>
+                </div>
+
+                <!-- Player 6: Neymar Jr. -->
+                <div class="bg-white p-6 rounded-lg shadow-xl">
+                    <h3 class="text-xl lg:text-2xl tracking-tight font-semibold mb-2">
+                        Neymar Jr.
+                    </h3>
+                    <img class="w-full h-auto rounded-lg shadow-md mb-4" 
+                         src="https://placehold.co/600x400/3B82F6/ffffff/png?text=NEYMAR+JR" 
+                         alt="Placeholder image for Neymar Jr." 
+                         onerror="this.src='https://placehold.co/600x400/3B82F6/ffffff/png?text=NEYMAR+JR'">
+                    <p class="text-base mb-4 text-gray-700">
+                        Celebrated for his incredible flair and dazzling dribbling skills, Neymar is a technical genius and a key creative force for the Brazilian national team.
+                    </p>
+                </div>
+
+                <!-- Player 7: Vinícius Júnior (New Addition) -->
+                <div class="bg-white p-6 rounded-lg shadow-xl">
+                    <h3 class="text-xl lg:text-2xl tracking-tight font-semibold mb-2">
+                        Vinícius Júnior
+                    </h3>
+                    <img class="w-full h-auto rounded-lg shadow-md mb-4" 
+                         src="https://placehold.co/600x400/6D28D9/ffffff/png?text=VINICIUS+JUNIOR" 
+                         alt="Placeholder image for Vinícius Júnior" 
+                         onerror="this.src='https://placehold.co/600x400/6D28D9/ffffff/png?text=VINICIUS+JUNIOR'">
+                    <p class="text-base mb-4 text-gray-700">
+                        A dynamic and electric winger for Real Madrid, Vini Jr. is known for his speed, incredible acceleration, and ability to deliver in big European final moments.
+                    </p>
+                </div>
+                
+                <!-- Player 8: Aitana Bonmatí (New Addition) -->
+                <div class="bg-white p-6 rounded-lg shadow-xl">
+                    <h3 class="text-xl lg:text-2xl tracking-tight font-semibold mb-2">
+                        Aitana Bonmatí
+                    </h3>
+                    <img class="w-full h-auto rounded-lg shadow-md mb-4" 
+                         src="https://placehold.co/600x400/DB2777/ffffff/png?text=AITANA+BONMATI" 
+                         alt="Placeholder image for Aitana Bonmatí" 
+                         onerror="this.src='https://placehold.co/600x400/DB2777/ffffff/png?text=AITANA+BONMATI'">
+                    <p class="text-base mb-4 text-gray-700">
+                        A World Cup winner and recent Ballon d'Or Féminin recipient, Bonmatí is an elite central midfielder celebrated for her technical mastery and football intelligence.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+        
+    </main>
+    
+</body>
+</html>

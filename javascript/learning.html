@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essential JS Foundations</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+    --bg: #0b0e14;
+    --sidebar-bg: #13171f;
+    --card-bg: #1c212c;
+    --accent: #00f2ff;
+    --text-main: #e2e8f0;
+    --text-dim: #94a3b8;
+    --border: #2d3748;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg);
+    color: var(--text-main);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 1.7;
+}
+
+/* Layout */
+.main-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    background: var(--sidebar-bg);
+    padding: 2rem;
+    border-right: 1px solid var(--border);
+}
+
+.content {
+    flex: 1;
+    padding: 4rem;
+}
+
+/* Typography */
+h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 1rem; }
+h2 { font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--accent); }
+.accent { color: var(--accent); text-shadow: 0 0 30px rgba(0, 242, 255, 0.2); }
+code { font-family: 'JetBrains Mono', monospace; color: var(--accent); font-size: 0.9em; }
+
+/* Components */
+.navbar {
+    padding: 1.5rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-list { list-style: none; }
+.nav-list li { margin-bottom: 1.5rem; }
+.nav-list a { 
+    text-decoration: none; 
+    color: var(--text-dim); 
+    font-weight: 600;
+    transition: 0.3s;
+}
+.nav-list a:hover { color: var(--accent); padding-left: 5px; }
+
+.section { margin-bottom: 8rem; max-width: 800px; }
+
+.table-container {
+    margin-top: 2rem;
+    overflow-x: auto;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card-bg);
+}
+
+th, td { padding: 1rem; text-align: left; border-bottom: 1px solid var(--border); }
+th { color: var(--text-dim); font-size: 0.8rem; text-transform: uppercase; }
+
+.code-block {
+    background: #000;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent);
+    margin: 2rem 0;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.info-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.warning { border-color: #f87171; }
+
+@media (max-width: 900px) {
+    .main-container { flex-direction: column; }
+    .sidebar { width: 100%; height: auto; position: relative; }
+    .content { padding: 2rem; }
+}
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">JS<span>FOUNDATIONS</span></div>
+        <div class="status-badge">Professional Guide v1.0</div>
+    </nav>
+
+    <main class="main-container">
+        <aside class="sidebar">
+            <ul class="nav-list">
+                <li><a href="#arch">01. Architecture</a></li>
+                <li><a href="#data">02. Data Flow</a></li>
+                <li><a href="#scope">03. Execution</a></li>
+                <li><a href="#dom">04. The Bridge</a></li>
+                <li><a href="#events">05. Interaction</a></li>
+                <li><a href="#growth">06. Dynamic Growth</a></li>
+            </ul>
+        </aside>
+
+        <div class="content">
+            <header class="hero">
+                <h1>Essential JavaScript <span class="accent">Foundations</span></h1>
+                <p class="subtitle">The 20% of Logic and DOM Mastery for Professional Engineering.</p>
+            </header>
+
+            <section id="arch" class="section">
+                <h2>01. The Architecture of Logic</h2>
+                <p>Functions are strategic sub-programs defining the execution lifecycle. For a senior developer, choosing between Declarations and Expressions is about <strong>predictability</strong>.</p>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Function Declaration</th>
+                                <th>Anonymous Function</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Hoisting</td>
+                                <td class="highlight-cell">Fully Hoisted</td>
+                                <td>Not Hoisted</td>
+                            </tr>
+                            <tr>
+                                <td>Syntax</td>
+                                <td><code>function calc() {}</code></td>
+                                <td><code>const calc = () => {}</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="scope" class="section">
+                <h2>03. Execution Control</h2>
+                <p>Strategic scope management is the primary defense against "global scope pollution."</p>
+                <div class="code-block">
+                    <pre>
+(function() {
+    const internalConfig = "Secure_Key_01";
+    console.log("System initialized securely.");
+})();</pre>
+                </div>
+            </section>
+
+            <section id="dom" class="section">
+                <h2>04. The Bridge to the User</h2>
+                <p>The DOM is the critical interface where logic meets structure. Precise selection via <code>getElementById()</code> ensures efficiency.</p>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>.innerText</h3>
+                        <p>The safe standard. Handles input as raw text to prevent malicious scripts.</p>
+                    </div>
+                    <div class="info-card warning">
+                        <h3>.innerHTML</h3>
+                        <p>Powerful but risky. Can introduce Cross-Site Scripting (XSS) vulnerabilities.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="growth" class="section">
+                <h2>06. Dynamic Growth</h2>
+                <p>Dynamic element generation is a two-step lifecycle: <strong>Creation</strong> and <strong>Integration</strong>.</p>
+                <ul class="lifecycle">
+                    <li><strong>Creation:</strong> Defining the object in memory with <code>createElement</code>.</li>
+                    <li><strong>Integration:</strong> Rendering to the browser via <code>appendChild</code>.</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>Built for Scalability. &copy; 2026 Developer Roadmap.</p>
+    </footer>
+
+</body>
+</html>

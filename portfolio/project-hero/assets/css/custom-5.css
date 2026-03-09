@@ -1,0 +1,124 @@
+/*title Felix Mendoza Id: 75225*/
+/* HERO BLOCK 5 — Stunning UI/Tech Style */
+
+.hero-5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 90vh;
+}
+
+/* LEFT CONTENT PANEL */
+.content-panel {
+    background: #0b0f0f;
+    color: white;
+    padding: 90px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: fadeSlide 1.3s ease;
+}
+
+@keyframes fadeSlide {
+    from { opacity: 0; transform: translateX(-40px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* TOP NAME LABEL */
+.top-label {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 4px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #c7fff1;
+    opacity: 0.85;
+}
+
+/* ACCENT UNDERLINE */
+.accent-line {
+    width: 150px;
+    height: 4px;
+    background: linear-gradient(90deg, #32ffb2, #00d88a);
+    margin: 18px 0 35px 0;
+    border-radius: 3px;
+}
+
+/* TITLE */
+.title {
+    font-family: 'Abril Fatface', serif;
+    font-size: 4rem;
+    color: #32ffb2;
+    margin-bottom: 25px;
+}
+
+/* DESCRIPTION */
+.subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 50px;
+    max-width: 450px;
+    color: #d2d2d2;
+}
+
+/* BUTTON ROW */
+.btn-row {
+    display: flex;
+    gap: 16px;
+}
+
+/* OUTLINE BUTTON (Recent work) */
+.btn-outline {
+    padding: 12px 24px;
+    border: 2px solid #32ffb2;
+    border-radius: 8px;
+    color: #32ffb2;
+    background: transparent;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.25s ease;
+}
+
+.btn-outline:hover {
+    background: #1a2424;
+    transform: translateY(-3px);
+}
+
+/* GREEN CTA (Hire me) */
+.btn-green {
+    padding: 12px 24px;
+    background: #32ffb2;
+    color: #002d1e;
+    border-radius: 8px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.25s ease;
+}
+
+.btn-green:hover {
+    background: #25e59f;
+    transform: translateY(-3px);
+}
+
+/* RIGHT IMAGE */
+.image-panel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    /* soft reveal animation */
+    opacity: 0;
+    animation: fadeZoom 1.4s ease forwards;
+}
+
+@keyframes fadeZoom {
+    from { opacity: 0; transform: scale(1.05); }
+    to { opacity: 1; transform: scale(1); }
+}

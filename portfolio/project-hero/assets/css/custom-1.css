@@ -1,0 +1,51 @@
+/*title Felix Mendoza Id: 75225*/
+/* HERO DUOTONE STYLE */
+.hero-duotone {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-duotone .container-media img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    filter: brightness(0.6) saturate(1.4);
+}
+
+/* Blue–green gradient overlay */
+.hero-duotone .container-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(10,40,110,0.65), rgba(0,180,120,0.55));
+    mix-blend-mode: overlay;
+}
+
+/* Typography */
+.hero-duotone h1 {
+    font-family: 'Abril Fatface', serif;
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero-duotone h2 {
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+/* Layout spacing */
+.container-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 40px;
+    padding: 80px 60px;
+}
+
+.col-6 {
+    grid-column: span 6;
+}
+
+/* Buttons */
+.container-btn a {
+    margin-right: 15px;
+}

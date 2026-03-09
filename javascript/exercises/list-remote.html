@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Remote API Demo</title>
+
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    #remote-data-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .card {
+      border: 1px solid #ccc;
+      padding: 12px;
+      border-radius: 6px;
+    }
+    img { display: block; margin-bottom: 8px; }
+    button {
+      padding: 10px 20px;
+      margin-right: 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+
+  <script src="list-remote.js" defer></script>
+</head>
+<body>
+
+  <h1>Display remote data</h1>
+
+  <div id="button-container">
+    <button id="btn-countries">Load Countries</button>
+    <button id="btn-users">Load Users</button>
+    <button id="btn-characters">Load Characters</button>
+  </div>
+
+  <div id="remote-data-container"></div>
+
+</body>
+</html>

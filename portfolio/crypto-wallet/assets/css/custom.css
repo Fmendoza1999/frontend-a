@@ -1,0 +1,94 @@
+/*title Felix Mendoza Id: 75225*/
+.container-grid {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    display: grid !important;
+    gap: 2.5rem;
+}
+
+.two-columns {
+    grid-template-columns: 1fr 1fr !important;
+}
+
+.align-center {
+    align-items: center;
+}
+
+/* UNIVERSAL SECTION PADDING */
+.section-padding {
+    padding: 4rem 0;
+}
+
+/* DARK BLUE SECTIONS */
+.theme-dark-blue {
+    background: #29435C;
+    color: #ffffff;
+    padding: 4rem 0;
+}
+
+.theme-dark-blue-2 {
+    background: #1F3344;
+    color: #ffffff;
+    padding: 4rem 0;
+}
+
+/* IMAGES */
+.image-panel img,
+.video-wrapper iframe {
+    width: 100%;
+    border-radius: 0.75rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.30);
+}
+
+/* TYPOGRAPHY SPACING */
+h2 {
+    margin-bottom: 1.2rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* LISTS */
+.tick-list {
+    list-style: none;
+    padding: 0;
+}
+
+.tick-list li {
+    margin: 0.4rem 0;
+}
+
+.tick-list li::before {
+    content: "✓";
+    color: #4ADE80;
+    margin-right: 0.5rem;
+}
+
+/* VIDEO */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .two-columns {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+    }
+
+    .image-panel img {
+        margin: 0 auto;
+    }
+}
+
+

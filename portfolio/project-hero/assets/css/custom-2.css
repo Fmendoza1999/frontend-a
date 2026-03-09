@@ -1,0 +1,56 @@
+/*title Felix Mendoza Id: 75225*/
+/* HERO BLOCK 2 */
+.hero-analytics {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Image styling */
+.hero-analytics .container-media img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    filter: brightness(0.8) saturate(1.3);
+}
+
+/* Blue→Green overlay like Hero 1 */
+.hero-analytics .container-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(10,40,110,0.55),
+        rgba(0,180,120,0.55)
+    );
+    mix-blend-mode: overlay;
+}
+
+/* GRID LAYOUT */
+.container-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 50px;
+    padding: 80px 60px;
+}
+
+.col-6 {
+    grid-column: span 6;
+}
+
+/* Typography aligned with Hero 1 */
+.hero-analytics h1 {
+    font-family: 'Abril Fatface', serif;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-analytics h2 {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+/* Buttons styling */
+.container-btn a {
+    margin-right: 15px;
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOM, Objects, Arrays, Arrays of Objects</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+}
+h1, h2 { color: #333; }
+section {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.newHeadingClass {
+    background-color: blue;
+    color: pink;
+    padding: 10px;
+    border-radius: 5px;
+}
+.messageOrderPlaced {
+    background-color: lightgreen;
+    color: #000;
+    border: 1px solid green;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+button {
+    margin: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    background-color: green;
+}
+input[type="text"], input[type="number"] {
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 250px;
+}
+.input-error { border: 2px solid red; }
+.submit-btn { background-color: blue; }
+#welcomeMessage {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.user-section {
+    background-color: #e3f2fd;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+.green-output {
+    color: green;
+}
+</style>
+</head>
+<body>
+
+<section id="mySection">
+<h1 id="bigHeading">Big heading here</h1>
+<p>Lorem ipsum dolor sit amet.</p>
+
+<button onclick="changeHeading()">Update h1</button>
+<button onclick="restoreHeading()">Restore h1</button>
+<button onclick="doParaText()">Update para text</button>
+<button onclick="placeOrder()">Order product</button>
+
+<p id="paraText">Leverage agile frameworks.</p>
+</section>
+
+<div class="user-section">
+<h2>User Information</h2>
+<input type="text" id="userName" placeholder="Enter your name">
+<input type="text" id="Address" placeholder="Complete address">
+<input type="text" id="Phone" placeholder="Phone number">
+<input type="text" id="Email" placeholder="Email">
+<button class="submit-btn" onclick="saveUser()">Submit</button>
+<div id="welcomeMessage"></div>
+</div>
+
+<section>
+<h2>Array of Objects</h2>
+<div id="productOutput" class="green-output"></div>
+</section>
+
+<section>
+<h2>Submit Number</h2>
+<input type="number" id="userNumber" placeholder="Enter your User Number">
+<button onclick="submitNumber()">Submit Number</button>
+<div id="numberResult"></div>
+</section>
+
+<script>
+function changeHeading() {
+    const h = document.getElementById("bigHeading");
+    h.classList.add("newHeadingClass");
+    h.innerHTML = "New heading text in <i>italics</i> from JS";
+}
+
+function restoreHeading() {
+    const h = document.getElementById("bigHeading");
+    h.classList.remove("newHeadingClass");
+    h.innerText = "Big heading here";
+}
+
+function doParaText() {
+    document.getElementById("paraText").innerText = "New paragraph text from JS.";
+}
+
+function validateUser() {
+    const ids = ["userName", "Address", "Phone", "Email"];
+    let valid = true;
+    ids.forEach(id => {
+        const el = document.getElementById(id);
+        if (el.value.trim() === "") {
+            el.classList.add("input-error");
+            valid = false;
+        } else {
+            el.classList.remove("input-error");
+        }
+    });
+    return valid;
+}
+
+const objUser = {
+    firstName: "Luis",
+    lastName: "Martinez",
+    age: 32,
+    isActive: true
+};
+
+console.log(objUser);
+
+let savedUser = {};
+
+function saveUser() {
+    const msg = document.getElementById("welcomeMessage");
+    if (!validateUser()) {
+        msg.innerText = "Please complete all fields.";
+        msg.style.color = "#f44336";
+        return;
+    }
+    savedUser.firstName = document.getElementById("userName").value;
+    savedUser.address = document.getElementById("Address").value;
+    savedUser.phone = document.getElementById("Phone").value;
+    savedUser.email = document.getElementById("Email").value;
+    msg.innerText = "Information saved successfully.";
+    msg.style.color = "#4CAF50";
+    console.log(savedUser);
+}
+
+function placeOrder() {
+    if (Object.keys(savedUser).length === 0) {
+        alert("Complete all fields before ordering.");
+        return;
+    }
+    const d = document.createElement("div");
+    d.classList.add("messageOrderPlaced");
+    d.innerHTML = "Your order has been placed. <b>Thank you</b>.";
+    document.getElementById("mySection").appendChild(d);
+}
+
+const arrProducts = [
+    { name: "Laptop", productId: 1001, price: 999.99, inStock: true },
+    { name: "Mouse", productId: 1002, price: 24.99, inStock: true },
+    { name: "Keyboard", productId: 1003, price: 59.99, inStock: false }
+];
+
+const productOutput = document.getElementById("productOutput");
+
+arrProducts.forEach(product => {
+    const block = document.createElement("div");
+    block.style.marginBottom = "20px";
+    block.innerHTML = `
+        <strong>${product.name}</strong><br>
+        Product ID: ${product.productId}<br>
+        Price: €${product.price}<br>
+        Stock Status: ${product.inStock ? "In Stock" : "Out of Stock"}
+    `;
+    productOutput.appendChild(block);
+});
+
+function submitNumber() {
+    const num = document.getElementById("userNumber").value;
+    const output = document.getElementById("numberResult");
+    if (num === "") {
+        output.innerText = "Please enter a number.";
+        output.style.color = "red";
+        return;
+    }
+    output.innerText = `Number submitted: ${num}`;
+    output.style.color = "green";
+}
+</script>
+
+</body>
+</html>
